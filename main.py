@@ -18,8 +18,8 @@ from pathlib import Path
 tools =[make_dir,pdf_move_category,rename_pdf,read_pdf,update_currpdf]
 
 model = ChatOpenAI(
-    model="qwen/qwen3-coder:free",
-    openai_api_key="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",
+    model="",  #enter model
+    openai_api_key="", #enter api
     base_url="https://openrouter.ai/api/v1",
 ).bind_tools(tools)
 
@@ -147,5 +147,6 @@ app = graph.compile()
 
 
 app.invoke({'dir':r"C:\Users\mohamed\Desktop\books"})
+
 
 
